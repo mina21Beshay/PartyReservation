@@ -1,0 +1,15 @@
+﻿@model MvcMovie.Models.GuestResponse;
+<body class="text-center">
+    <p>
+        <h1> <b> <center> Thank you, @Model.Name! </center> </b> </h1>
+        @if (Model.Parking == true)
+        {
+            @:Can't wait to see you there! We are going to have a BLAST!
+        }
+        else
+        {
+            @:Sorry you can't make it, but thanks for letting us know!
+        }
+    </p>
+    <p>Click <a class="nav-link" asp-action="ListOfGuests">here </a> to see who else is coming</p>
+</body>

@@ -1,0 +1,47 @@
+﻿@model MvcMovie.Models.GuestResponse;
+
+<h5 class ="btn-primary text-white text-align-content-center m-2 p-2"> RSVP</h5>
+<form asp-action = "Rsvp" method = "post" class = "m-2"> 
+    <div asp-validation-summary = "All"> </div>
+    <!-- Name input --(Erroresage) -->
+    <div class = "">
+        <label asp-for="Name"> Your name:</label>
+    </div>
+    <div>
+        <input class ="form-control" asp-for = "Name"style = "width: 350px; background-color: #ffffcc;" />
+    </div>
+
+    <!-- Age Input -->
+    <div class = "form-group">
+        <label asp-for="Age">Your age:</label>
+    </div>
+    <div>
+        <input class = "form-control" asp-for = "Age" type = "number" style = "width: 350px; background-color: #ffffcc;" /> 
+    </div>
+
+    <!-- Time Input -->
+    <div class = "form-group">
+        <label asp-for = "Time" > Arrival Time: </label>
+    </div>
+    <div>
+        <input class = "form-control" asp-for = "Time" type = "time" style = "width: 350px; background-color: #ffffcc;" /> 
+    </div>
+
+    <!-- Parking Select option  -->
+    <div class = "form-group">
+        <label asp-for = "Parking" > Request Parking? </label>
+    </div>
+    <div>
+        <select class = "form-control" asp-for = "Parking" style = "width: 350px; background-color: #ffffcc;">
+            <option> --Select an option</option>
+            <option value = "True"> True</option> 
+            <option value = "False"> False</option>
+        </select>
+    </div>
+    <!-- Submit button -->
+     <div class="text-center">
+          <button class="btn btn-primary" type="submit">
+            Submit RSVP
+          </button>
+    </div>
+</form>

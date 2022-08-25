@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@section Styles {
+    <link href = "@Url.Content("MvcMovie/Views/Homestyles.css")"
+    rel = "stylesheet" type = "text/css" />
+}
+<style>
+    .button {
+      background-color: #0000FF; /* blue */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+</style>
+    <div class="text-center">
+         <h2 class="display-4"> <b> We're going to have an exciting party! </b></h2> 
+    <h2> <b> And YOU are invited! </b> </h2>
+   <button> <a class="button" asp-area="" asp-controller="Home" asp-action="Rsvp"> RSVP Now</a> </button>
+
+</div>

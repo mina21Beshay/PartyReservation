@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MvcMovie.Models.GuestResponse>;
+@{
+    ViewData["Title"] = "Guest List";
+}
+
+   <h1 color: #000000>@ViewData["Title"] </h1>
+
+
+    <div class="panel-body">
+        <h3>Here is the list of people attending the party</h3>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Arrival Time</th>
+                    <th>Request Parking</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (MvcMovie.Models.GuestResponse r in Model)
+                {
+                    <tr>
+                        <td>@r.Name</td>
+                        <td>@r.Age</td>
+                        <td>@r.Time</td>
+                        <td>@r.Parking</td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+  
